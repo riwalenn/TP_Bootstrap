@@ -28,9 +28,26 @@
         -o-background-size: cover;
       }
 
+      /* Polices */
+       @font-face{
+        font-family: 'Lato-Regular';
+        src: url('assets/fonts/Lato-Regular.woff2') format('woff2'),
+            url('assets/fonts/Lato-Regular.ttf') format('truetype');
+     }
+       @font-face{
+        font-family: 'EBgaramond-Regular';
+        src: url('assets/fonts/ebgaramond08-regular-webfont.woff') format('woff'),
+            url('assets/fonts/ebgaramond08-regular-webfont.woff2') format('woff2');
+        }
+
+        p{
+        	font-family: 'EBgaramond-Regular';
+        }
+
       /* titres & liens */
       h1{
       	margin-bottom: 3%;
+      	font-family: 'Lato-Regular';
       }
       a.nav-link{
       	font-size: larger;
@@ -95,7 +112,7 @@
 	<!-- Navigation
       ================================================== -->
       <header>
-      	<nav id="maisonarchitecture" class="navbar navbar-expand-lg navbar-dark bg-dark">
+      	<nav id="maisonarchitecture" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 		  <a class="navbar-brand" href="#">La maison de l'architecture</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
