@@ -58,7 +58,25 @@
 	<!-- Navigation
       ================================================== -->
       <header>
-      	
+      	<nav id="maisonarchitecture" class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="#">La maison de l'architecture</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+		        <a class="nav-link" href="#accueil">Accueil</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#qui">Qui sommes-nous ?</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#contact">Contact</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
       </header>
 
       <!-- Caroussel
@@ -108,7 +126,7 @@
 
     <!-- Corps de page déjà codé
     ================================================== -->
-    <div class="container">
+    <div class="container" data-spy="scroll" data-target="#maisonarchitecture" data-offset="0">
 
       <div class="jumbotron row" id="accueil">
         <h1 class="text-center">Bienvenue dans notre espace</h1>
@@ -156,8 +174,8 @@
 
     <script>
       // Scrollspy fluide
-      $(function () {
-        $('header a').on('click', function(e) {
+      $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
+  			$('header a').on('click', function(e) {
           e.preventDefault();
           var hash = this.hash;
           $('html, body').animate({
@@ -166,7 +184,7 @@
             window.location.hash = hash;
           });
         });
-      });
+		})
     </script>
 </body>
 </html>
